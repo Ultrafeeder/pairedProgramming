@@ -22,29 +22,34 @@
 let array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 function primeOrNot(num) {
-    let prime = [];
-    let not = [];
-    if (num <= 1) {
-        not.push(num);
-    } else {
-        for (let i = 2; i < num; i++) {
-            if (num % i == 0) {
-                not.push(num);
-            }else {
-            prime.push(num)
-             }
-        }
-        
+    let prime = {
+        here: []
+    };
+    let not = {
+        here: []
     }
+        if (num <= 1) {
+            not.here.push(num)
+        } else {
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    not.here.push(num);
+                } else {
+                    prime.here.push(num)
+                }
+            }
+        }
 }
+
+console.log(primeOrNot(array2))
     
 
-array2.forEach(function (x) {
-    const isPrime = primeOrNot(x);
-    if (isPrime) {
-        console.log(primeOrNot(array2))
-    }
-});
+// array2.forEach(function (x) {
+//     const isPrime = primeOrNot(x);
+//     if (isPrime) {
+//         console.log(primeOrNot(array2))
+//     }
+// });
 
 
 
