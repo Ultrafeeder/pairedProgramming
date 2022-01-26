@@ -1,9 +1,9 @@
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+
 function oddOrEven(num) {
     let odd = [];
     let even = [];
-
     for (let i = 0; i < num.length; i++) {
         if (num[i] % 2 === 0) {
             even.push(num[i])
@@ -11,40 +11,50 @@ function oddOrEven(num) {
             odd.push(num[i])
         }
     }
-    return odd && even
+    console.log(odd);
+    console.log(even);
 }
 
 
 
-console.log(oddOrEven(array))
+// oddOrEven(array);
+
+
 
 
 let array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-function primeOrNot(num) {
-    let prime = [];
-    let not = [];
-    if (num <= 1) {
-        not.push(num);
-    } else {
-        for (let i = 2; i < num; i++) {
-            if (num % i == 0) {
-                not.push(num);
-            }else {
-            prime.push(num)
-             }
-        }
-        
+// function primeOrNot(num) {
+//     let prime = [];
+//     if (num <= 1) {
+//         return false;
+//     } else if (num % i == 0) {
+//         return false;
+//             }else {
+//         return true;
+//     }
+// }
+
+function checkPrime(x) {
+    if (x < 2) {
+        return false;
     }
+    for (let i = 2; i < x; i++){
+        if (x % i === 0) {
+            return false;
+        } 
+    }
+    return x !== 1;
 }
+
+let primes = array2.filter(checkPrime)
+
+console.log(primes)
     
 
-array2.forEach(function (x) {
-    const isPrime = primeOrNot(x);
-    if (isPrime) {
-        console.log(primeOrNot(array2))
-    }
-});
+
+    
+
 
 
 
