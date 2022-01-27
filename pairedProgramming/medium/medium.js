@@ -27,3 +27,40 @@ function anagramCheck(x, y) {
 }
 
 console.log(anagramCheck("dog", "god"))
+
+// MEDIUM 3
+
+function gcd(a, b) {
+    if (!b) {
+        return a
+    }
+    return gcd(b, a % b)
+}
+
+console.log(gcd(3, 12));
+
+// MEDIUM 4
+
+var car = {
+    make: "Sub-ster",
+    model: "Legacy",
+    year: "old",
+    mileage: 250000,
+    color: "rusty",
+    driveToWork: (mile) => {
+        let newMile = car.mileage + mile;
+        console.log(`Getting closer...every day: ${newMile} miles.`)
+    },
+    runErrands: (mile) => {
+        let newMile = car.mileage + mile;
+        console.log(`Hopefully it'll make it: ${newMile} miles.`)
+    },
+    driveToWork: (mile) => {
+        let newMile = car.mileage + mile;
+        console.log(`The sea is only a floored pedal away! : ${newMile} miles.`)
+    }
+}
+
+// car.driveToWork(4);
+// car.runErrands(30);
+car.driveToWork(100000000000000);
