@@ -7,7 +7,7 @@ function vowelChecker(x) {
         console.log("nah.")
     }
 }
-vowelChecker("a");
+// vowelChecker("a");
 
 //MEDIUM 2
 
@@ -26,7 +26,7 @@ function anagramCheck(x, y) {
     }
 }
 
-console.log(anagramCheck("dog", "god"))
+console.log(anagramCheck("abc", "bca"))
 
 // MEDIUM 3
 
@@ -37,7 +37,7 @@ function gcd(a, b) {
     return gcd(b, a % b)
 }
 
-console.log(gcd(3, 12));
+console.log(gcd(36, 48));
 
 // MEDIUM 4
 
