@@ -4,11 +4,11 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 function oddOrEven(num) {
     let odd = [];
     let even = [];
-    for (let i = 0; i < num.length; i++) {
-        if (num[i] % 2 === 0) {
-            even.push(num[i])
+    for (let a = 0; a < num.length; a++) {
+        if (num[a] % 2 === 0) {
+            even.push(num[a])
         } else {
-            odd.push(num[i])
+            odd.push(num[a])
         }
     }
     console.log(odd);
@@ -17,7 +17,7 @@ function oddOrEven(num) {
 
 
 
-// oddOrEven(array);
+oddOrEven(array);
 
 
 
